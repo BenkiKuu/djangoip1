@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="photos">
+
+    {% for photo in pic %}
+      <img src="{{photo.image.url}}" data-target="#deleteModal{{photo.id}}" data-toggle="modal" alt="">
+    {% endfor %}
+  </section>
+
+  <!--modal-->
+    {% for photo in pic %}
+      <div class="modal fade" id="deleteModal{{photo.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <img src="{{photo.image.url}}" data-target="#deleteModal{{photo.id}}" data-toggle="modal" alt="">
+              <div class="modal-header">
+              <h4 id=modal-text>{{photo.name}}</h4>
+            </div>
+
+            <div class="modal-footer">
+
+              <input class="form-control" type="text" value="{{photo.image.url}}" id="link">
+              <a onclick="copyLink()"><button type="button"  class="btn btn-outline-secondary my-2 my-sm-0 link-btn">Copy Link</button></a>
+            </div>
+            <div class="modal-footer">
+
+              <h5 id=modal-text>{{photo.description}}</h5>
+
+              <button type="button" class="btn btn-outline-secondary my-2 my-sm-0" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+   {% endblock %}
