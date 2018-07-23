@@ -48,7 +48,7 @@ python3.6 manage.py runserver
 
 ## Deployment
 
-A colegue of mine, Bernard Karanja has a step by step on deploying to Heroku Check it out here [Deploying this and other Django Apps to Heroku](https://gist.github.com/Benard18/01e28cfbd911f87c7df8ee33cbdaa593)
+A colegue of mine, Bernard Karanja has a step by step on deploying to Heroku Check it out here [ Deploying this and other Django Apps to Heroku](https://gist.github.com/Benard18/01e28cfbd911f87c7df8ee33cbdaa593)
 
 ## Built With
 
