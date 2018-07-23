@@ -22,6 +22,19 @@ class CategoryTestClass(TestCase):
         self.assertEqual(len(Category.objects.all()), 0)
 
 
+class LocationTestClass(TestCase):
+    # Set up method
+    def setUp(self):
+        self.test_location = Location(name='Riverbank')
+        self.test_location.save_location()
+
+
+    # Tear down method
+    def tearDown(self):
+        Location.objects.all().delete()
+
+    # Testing save method
+    
 
 
 
