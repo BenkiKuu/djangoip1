@@ -1,4 +1,15 @@
+from django.test import TestCase
+from .models import Category, Location, Image
 
+
+class CategoryTestClass(TestCase):
+    # Set up method
+    def setUp(self):
+        self.test_category = Category(name='Simba')
+        self.test_category.save_category()
+
+    # Tear down method
+    
 
 
 
