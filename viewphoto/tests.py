@@ -38,7 +38,10 @@ class LocationTestClass(TestCase):
         self.assertEqual(len(Location.objects.all())> 0)
 
     # Testing delete method
-    
+    def test_delete_location(self):
+        self.test_location.delete_location()
+        self.assertEqual(len(Location.objects.all()), 0)
+
 
 
 
