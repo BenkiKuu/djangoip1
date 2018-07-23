@@ -9,8 +9,15 @@ class CategoryTestClass(TestCase):
         self.test_category.save_category()
 
     # Tear down method
-    
+    def tearDown(self):
+        Category.objects.all().delete()
 
+    # Testing save method
+    def test_save_category(self):
+        self.assertEqual(len(Category.objects.all())>0)
+
+    # Testing delete method
+    
 
 
 
