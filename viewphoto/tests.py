@@ -17,7 +17,12 @@ class CategoryTestClass(TestCase):
         self.assertEqual(len(Category.objects.all())>0)
 
     # Testing delete method
-    
+    def test_delete_category(self):
+        self.test_category.delete_category()
+        self.assertEqual(len(Category.objects.all()), 0)
+
+
+
 
 
 
