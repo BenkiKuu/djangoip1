@@ -34,6 +34,10 @@ class LocationTestClass(TestCase):
         Location.objects.all().delete()
 
     # Testing save method
+    def test_save_location(self):
+        self.assertEqual(len(Location.objects.all())> 0)
+
+    # Testing delete method
     
 
 
