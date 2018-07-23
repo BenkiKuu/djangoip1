@@ -43,6 +43,21 @@ class LocationTestClass(TestCase):
         self.assertEqual(len(Location.objects.all()), 0)
 
 
+class ImageTestClass(TestCase):
+    # Set up method
+    def setUp(self):
+        self.test_image = Image(image='images/pic.jpg',
+                                name='Test-image',
+                                description='Test description 123')
+        self.test_image.save_image()
+
+    # Tear down method
+    def tearDown(self):
+        Image.objects.all().delete()
+
+    
+
+
 
 
 
